@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${UPAX_DB_URL:jdbc:mysql://192.168.65.3:3306/empleadosdb}
+    username: ${UPAX_DB_USERNAME:admin}
+    password: ${UPAX_DB_PASSWORD:admin123}
+  jpa:
+    generate-ddl: ${UPAX_JPA_GENERATE_DDL:false}
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    hibernate:
+      ddl-auto: ${UPAX_JPA_DLL_AUTO:none}
+    show-sql: ${UPAX_JPA_SHOW_SQL:false}
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
