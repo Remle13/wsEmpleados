@@ -1,9 +1,10 @@
 CREATE TABLE `employee_worked_hours` (
-  `id` bigint(20) NOT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `employee_id` bigint(20) NOT NULL,
   `worked_hours` int NOT NULL,
   `worked_date` date NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `name_uidx` (`employee_id`,`worked_date`),
   KEY `FK_EMPLOYEES` (`employee_id`),
   CONSTRAINT `FK_EMPLOYEES` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`)
 );

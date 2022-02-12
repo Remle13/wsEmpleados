@@ -1,9 +1,13 @@
 package com.upax.empleados.repository;
 
+import com.upax.empleados.entity.WorkedHoursEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.upax.empleados.entity.EmployeeEntity;
+
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * Repositorio de Empleados.
@@ -16,5 +20,7 @@ import com.upax.empleados.entity.EmployeeEntity;
 
 @Repository
 public interface IEmployeeRepository extends JpaRepository<EmployeeEntity, Long>{
+
+    public List<EmployeeEntity> findAllByJobId(Long job_id);
 
 }

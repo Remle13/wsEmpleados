@@ -1,9 +1,9 @@
 package com.upax.empleados.business;
 
 import com.upax.empleados.constant.DatosConstant;
-import com.upax.empleados.model.request.EmployeeByIdRequest;
 import com.upax.empleados.model.request.EmployeeRequest;
 import com.upax.empleados.model.response.EmployeeRetrieveResponse;
+import com.upax.empleados.model.response.EmployeeTotalWHResponse;
 import com.upax.empleados.model.response.EmployeeSaveResponse;
 import com.upax.empleados.services.IEmployeeService;
 import org.junit.jupiter.api.Test;
@@ -18,8 +18,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.List;
-import java.util.Arrays;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -91,31 +89,6 @@ class EmployeeBusinessTest {
 
         Mockito.when(repository.findAll()).thenThrow(NullPointerException.class);
         EmployeeRetrieveResponse response = service.getEmployeesByJobId(request);
-
-        assertFalse(response.getSuccess());
-    }
-
-    @Test
-    void getEmployeesById() {
-        EmployeeEntity entity = DatosConstant.EXPLOREE_ENTITY;
-        EmployeeByIdRequest request = new EmployeeByIdRequest();
-        request.setIds(Arrays.asList(1L, 2L));
-
-        Mockito.when(repository.findById(request.getIds().get(0))).thenReturn(Optional.of(entity));
-        EmployeeRetrieveResponse response = service.getEmployeesById(request);
-
-        assertTrue(response.getSuccess());
-        assertEquals(request.getIds().get(0),response.getEmployees().get(0).getId());
-        assertNotEquals(request.getIds().get(1),response.getEmployees().get(0).getId());
-    }
-
-    @Test
-    void getEmployeesByIdThrow() {
-        EmployeeByIdRequest request = new EmployeeByIdRequest();
-        request.setIds(Arrays.asList(null,null));
-
-        Mockito.when(repository.findById(Mockito.isNull())).thenThrow(NullPointerException.class);
-        EmployeeRetrieveResponse response = service.getEmployeesById(request);
 
         assertFalse(response.getSuccess());
     }

@@ -5,7 +5,7 @@ package com.upax.empleados.constant;
  *
  * @author Elmer LV
  * @enterprise UPAX
- * @since 21/01/22
+ * @since 11/02/22
  */
 public class DatabaseConstant {
   /** Nombre de la tabla empleados. */
@@ -38,7 +38,17 @@ public class DatabaseConstant {
   public static final String PROPERTY_JOB_NAME = "name";
   /** Propiedad para el salario del puesto. */
   public static final String PROPERTY_JOB_SALARY = "salary";
-  
+
+  /** Nombre de la tabla de horas trabajadas. */
+  public static final String TABLE_WORKED_HOURS = "employee_worked_hours";
+  /** Propiedad para el identificador de las horas trabajadas. */
+  public static final String PROPERTY_WORKED_HOURS_ID = "id";
+  /** Propiedad para el identificador del empleado. */
+  public static final String PROPERTY_WORKED_HOURS_EMPLOYEE_ID = "employee_id";
+  /** Propiedad para las horas trabajadas. */
+  public static final String PROPERTY_WORKED_HOURS_WORKED_HOURS = "worked_hours";
+  /** Propiedad para la fecha trabajada. */
+  public static final String PROPERTY_WORKED_HOURS_WORKED_DATE = "worked_date";
 
   /** Constructor privado. */
   private DatabaseConstant() {}

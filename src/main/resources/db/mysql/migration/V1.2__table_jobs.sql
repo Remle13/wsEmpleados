@@ -5,8 +5,8 @@ CREATE TABLE `jobs` (
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO jobs(id, name, salary) VALUES(1, 'Gerente', 75000.00);
-INSERT INTO jobs(id, name, salary) VALUES(2, 'Scrum Master', 55000.00);
-INSERT INTO jobs(id, name, salary) VALUES(3, 'Lider tecnico', 50000.00);
-INSERT INTO jobs(id, name, salary) VALUES(4, 'Senior Dev', 45000.00);
-INSERT INTO jobs(id, name, salary) VALUES(5, 'Junior Dev', 35000.00);
+INSERT INTO jobs(id, name, salary) VALUES(1, 'Gerente', 467.50);
+INSERT INTO jobs(id, name, salary) VALUES(2, 'Scrum Master', 343.25);
+INSERT INTO jobs(id, name, salary) VALUES(3, 'Lider tecnico', 312.75);
+INSERT INTO jobs(id, name, salary) VALUES(4, 'Senior Dev', 281.50);
+INSERT INTO jobs(id, name, salary) VALUES(5, 'Junior Dev', 219.00);

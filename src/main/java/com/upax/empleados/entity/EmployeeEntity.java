@@ -1,5 +1,6 @@
 package com.upax.empleados.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.NaturalId;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -67,12 +68,14 @@ public class EmployeeEntity{
   @Column(name = DatabaseConstant.PROPERTY_EMPLOYEE_BIRTHDATE)
   private LocalDate birthdate;
 
-  /*public EmployeeEntity(Long id, GenderEntity gender, JobEntity job, String name, String last_name, LocalDate birthdate) {
-    this.id = id;
-    this.gender = gender;
-    this.job = job;
-    this.name = name;
-    this.last_name = last_name;
-    this.birthdate = birthdate;
-  }*/
+  /*@MapsId("employeeId")
+  @ToString.Exclude
+  @ManyToOne(optional = false)
+  @JoinColumn(
+          name = "employee_id",
+          referencedColumnName = "id",
+          insertable = false,
+          updatable = false)
+  private WorkedHoursEntity workedHours;*/
+
 }

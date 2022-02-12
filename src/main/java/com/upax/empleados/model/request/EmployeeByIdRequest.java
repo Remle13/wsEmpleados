@@ -24,7 +24,7 @@ public class EmployeeByIdRequest {
 	
 	/** Lista de ids de empleados */
 	@JsonProperty("employee_id")
-	private List<Long> ids;
+	private Long employeeId;
 
 	/** Fecha inicio. */
 	@JsonProperty("start_date")
