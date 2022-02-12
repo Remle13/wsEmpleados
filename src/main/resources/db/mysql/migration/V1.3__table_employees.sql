@@ -16,4 +16,4 @@ CREATE TABLE `employees` (
 INSERT INTO employees (id, gender_id, job_id, name, last_name, birthdate) 
 VALUES (1, 1, 1, 'Elmer', 'López', '1990-02-13');
 INSERT INTO employees (id, gender_id, job_id, name, last_name, birthdate) 
-VALUES (2, 2, 3, 'Andres', 'Obrador', '1923-11-05');
+VALUES (2, 3, 3, 'Xavier', 'Rodriguez', '1923-11-05');

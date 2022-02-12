@@ -1,6 +1,11 @@
 package com.upax.empleados.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.NaturalId;
 
 import com.upax.empleados.constant.DatabaseConstant;
@@ -28,6 +33,7 @@ public class JobEntity{
   /** Identificador del puesto. */
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = DatabaseConstant.PROPERTY_JOB_ID)
   private Long id;
   
   /** Nombre del empleado. */
@@ -45,9 +51,4 @@ public class JobEntity{
 	  nullable = false)
   private double salary;
 
-    /*public JobEntity(Long id, String name, double salary) {
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
-    }*/
 }

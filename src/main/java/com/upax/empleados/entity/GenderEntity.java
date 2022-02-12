@@ -1,6 +1,11 @@
 package com.upax.empleados.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.NaturalId;
 
 import com.upax.empleados.constant.DatabaseConstant;
@@ -40,8 +45,4 @@ public class GenderEntity{
   @NaturalId(mutable = true)
   private String name;
 
-  /*public GenderEntity(Long id, String name) {
-    this.id = id;
-    this.name = name;
-  }*/
 }

@@ -1,7 +1,11 @@
 package com.upax.empleados.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.NaturalId;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -67,15 +71,5 @@ public class EmployeeEntity{
   @LastModifiedDate
   @Column(name = DatabaseConstant.PROPERTY_EMPLOYEE_BIRTHDATE)
   private LocalDate birthdate;
-
-  /*@MapsId("employeeId")
-  @ToString.Exclude
-  @ManyToOne(optional = false)
-  @JoinColumn(
-          name = "employee_id",
-          referencedColumnName = "id",
-          insertable = false,
-          updatable = false)
-  private WorkedHoursEntity workedHours;*/
 
 }

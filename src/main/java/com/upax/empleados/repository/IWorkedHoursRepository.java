@@ -3,7 +3,6 @@ package com.upax.empleados.repository;
 import com.upax.empleados.constant.QueryConstant;
 import com.upax.empleados.entity.EmployeeEntity;
 import com.upax.empleados.entity.WorkedHoursEntity;
-import com.upax.empleados.model.response.EmployeeResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -34,6 +33,6 @@ public interface IWorkedHoursRepository extends JpaRepository<WorkedHoursEntity,
      * @return lista de horas trabajadas por empleado {@link EmployeeEntity}
      */
     @Query(nativeQuery = true, value = QueryConstant.FIND_EMPLOYEE_WH_BY)
-    public List<WorkedHoursEntity> findByIdEmployee(Long employee_id, LocalDate startDate, LocalDate endDate);
+    List<WorkedHoursEntity> findByIdEmployee(Long employee_id, LocalDate startDate, LocalDate endDate);
 
 }

@@ -5,7 +5,9 @@ import java.time.LocalDate;
 import com.upax.empleados.entity.GenderEntity;
 import com.upax.empleados.entity.JobEntity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Respuesta de la API de employees.

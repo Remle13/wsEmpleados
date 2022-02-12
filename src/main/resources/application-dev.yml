@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${UPAX_DB_URL:jdbc:mysql://192.168.65.3:3306/empleadosdb}
+    url: ${UPAX_DB_URL:jdbc:mysql://localhost:3306/empleadosdb}
     username: ${UPAX_DB_USERNAME:admin}
     password: ${UPAX_DB_PASSWORD:admin123}
   jpa:

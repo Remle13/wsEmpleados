@@ -1,15 +1,25 @@
 package com.upax.empleados.entity;
 
 import com.upax.empleados.constant.DatabaseConstant;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 
 import org.springframework.data.annotation.LastModifiedDate;
 
-import javax.persistence.*;
-import javax.validation.constraints.Max;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.ManyToOne;
+import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
 
 import java.time.LocalDate;
-import java.util.Set;
 
 /**
  * Entidad para la tabla employees.

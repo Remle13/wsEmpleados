@@ -4,7 +4,11 @@ import com.upax.empleados.model.request.EmployeeByIdRequest;
 import com.upax.empleados.model.request.EmployeeByJobIdRequest;
 import com.upax.empleados.model.request.EmployeeRequest;
 import com.upax.empleados.model.request.WorkedHoursRequest;
-import com.upax.empleados.model.response.*;
+import com.upax.empleados.model.response.EmployeeSaveResponse;
+import com.upax.empleados.model.response.WorkedHoursResponse;
+import com.upax.empleados.model.response.EmployeeRetrieveResponse;
+import com.upax.empleados.model.response.EmployeeTotalWHResponse;
+import com.upax.empleados.model.response.EmployeeTotalPaymentResponse;
 
 /**
  * Reglas de negocio de Employees
